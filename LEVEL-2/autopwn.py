@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/python3
 
 import requests
@@ -46,3 +47,15 @@ submit = pwn.post(url, headers=headers, data=data)
 
 flag = "WEBSEC{" + re.search(flag_pattern, submit.text)[0] + "}"
 print(flag)
+=======
+import requests
+import re
+
+pwn = requests.session()
+
+url = "https://websec.fr/level02/index.php"
+
+getCookie = pwn.get(url)
+print(getCookie.text)
+
+>>>>>>> 9d60c2af60e66f84bfa1a6085e63fe902029ab86
