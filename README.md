@@ -1,2 +1,2 @@
 # websec.fr notes
-Web security Challenges
+Web security Challenges by @maikypedia
