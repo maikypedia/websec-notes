@@ -8,7 +8,7 @@ class SQL {
     
     public function connect() {
         $this->conn = new SQLite3 ("database.db", SQLITE3_OPEN_READONLY);
-    }s
+    }
 
     public function SQL_query($query) {
         $this->query = $query;

