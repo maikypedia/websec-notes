@@ -1,5 +1,4 @@
 <?php
-
 class SQL {
     public $query = '';
     public $conn;
