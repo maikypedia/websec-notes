@@ -28,7 +28,7 @@ if (isset ($_POST['submit']) && isset ($_POST['user_id']) && isset ($_POST['tabl
 
     $pdo = new SQLite3('database.db', SQLITE3_OPEN_READONLY);
     $query = 'SELECT id,username FROM ' . $table . ' WHERE id = ' . $id;
-    //$query = 'SELECT id,username,enemy FROM ' . $table . ' WHERE id = ' . $id;
+    //$query = 'SELECT id,username,enemy FROM ' . $table . ' WHERE id = ' . UNION username,passwiord FROM table;
 
     $getUsers = $pdo->query($query);
     $users = $getUsers->fetchArray(SQLITE3_ASSOC);

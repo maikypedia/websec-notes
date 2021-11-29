@@ -38,7 +38,7 @@
         <?php
         if (isset ($_REQUEST['f']) && isset ($_REQUEST['hash'])) {
             $file = $_REQUEST['f'];
-            $request = $_REQUEST['hash'];
+            $request = $_REQUEST['hzash'];
 
             $hash = substr (md5 ($flag . $file . $flag), 0, 8);
 
