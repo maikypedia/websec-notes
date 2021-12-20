@@ -1,6 +1,6 @@
 <?php
 
-// https://secure.php.net/manual/en/function.srand.php#90215
+// https://secure.php.net/manual/en/function.srand.php#9
 srand (microtime (true));
 
 function generate_random_text ($length) {
